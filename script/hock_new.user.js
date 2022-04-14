@@ -53,8 +53,8 @@ class Crane {
             'left': `${this.position.left}px`,
             'top': `${this.position.top}px`,
             // 'transform': 'translate(-50%, -50%)',
-            'width': '10em',
-            'height': '10em',
+            'width': '128px',
+            'height': '128px',
             'background-image': 'url(https://s3.bmp.ovh/imgs/2022/04/13/ebbf40101c3c1038.png)',
             'background-size': '100% auto',
             'overflow': 'visible',
@@ -105,7 +105,7 @@ class Crane {
         }
         // 绳子和爪子
         this.hock = new Hock(onCatch);
-        this.rope = new Rope(this.hock);
+        this.rope = new Rope(this.hock, 10);
         this.rope_hock_container_element
             .append(this.rope.element)
             .append(this.hock.element);
@@ -266,8 +266,8 @@ class Hock {
         this.element = $('<img>')
             .css({
                 'display': 'block',
-                'width': '4em',
-                'height': '4em',
+                'width': '64px',
+                'height': '64px',
                 'margin': '0 auto',
                 'margin-top': '-4px',
                 'object-fit': 'contain'
